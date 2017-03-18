@@ -55,7 +55,7 @@ public abstract class Person implements java.io.Serializable {
 			this.DOB = DOB;
 		}
 		else{
-			throw new PersonException();
+			throw new PersonException(Date);
 		}
 		
 		
@@ -78,7 +78,7 @@ public abstract class Person implements java.io.Serializable {
 			phone_number = newPhone_number;
 		}
 		else{
-			throw new PersonException();
+			throw new PersonException(newPhone_number);
 		}
 	
 	}

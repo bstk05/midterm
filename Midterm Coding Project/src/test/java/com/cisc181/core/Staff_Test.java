@@ -13,10 +13,11 @@ import java.util.Date;
 
 public class Staff_Test {
 	static ArrayList<Staff> stafflist = new ArrayList<Staff>();
+	
 
 	
 	@BeforeClass
-	public static void setup() throws Exception {
+	public static void setup() throws Exception{
 		
 		stafflist.add(new Staff("Peter","Tim", "Lemmons", new Date(1976, 10, 19), "21 sdfwe way","(302)-231-2342","Peter@gmail.com","Monday-Friday 12am-5pm",7,80000, new Date(2016, 5, 5), com.cisc181.eNums.eTitle.PRO));
 		stafflist.add(new Staff("Maybe","Rose", "Wade", new Date(1995, 3, 28), "24 dsfwf way","(423)-671-3456","Maybe@gmail.com","Monday-Friday 9am-3pm",6,100000, new Date(2016, 5, 5), com.cisc181.eNums.eTitle.SIR));
@@ -33,7 +34,19 @@ public class Staff_Test {
 			sum += i.getSalary();
 		}
 		double average = sum / 5;
-		assertEquals(average,1,1);
+		assertEquals(average,94000);
 	}	
+	
+	@Test
+	public void testPhoneNumber() throws PersonException{
+		try {
+			stafflist.add(new Staff("RTZ","b", "Young",new Date(1984, 9, 4) ,"324 wesd Rd","65286599",
+					"RTZ@gmail.com","Monday-Firday 11AM-2:30PM", 1, 7000, new Date(2016, 5, 5), com.cisc181.eNums.eTitle.PRO));
+		} catch (Exception e) {
+			System.out.println("This Phone Number is invalid.");
+			e.printStackTrace();
+		}
+	}
+	
 
 }
