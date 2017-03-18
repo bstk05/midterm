@@ -10,6 +10,7 @@ import java.util.regex.Pattern;
  */
 public abstract class Person implements java.io.Serializable {
 
+	private static final String Date = null;
 	private Date DOB;
 	private String FirstName;
 	private String MiddleName;
@@ -129,7 +130,7 @@ public abstract class Person implements java.io.Serializable {
 
 	public int PrintAge() {
 		Calendar today = Calendar.getInstance();
-		Calendar birthDate = Calendar.getInstance();
+		Calendar birthDate = Calendar.getInstance(); 
 
 		int age = 0;
 		birthDate.setTime(this.DOB);
