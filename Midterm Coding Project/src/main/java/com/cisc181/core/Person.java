@@ -10,7 +10,6 @@ import java.util.regex.Pattern;
  */
 public abstract class Person implements java.io.Serializable {
 
-	private static final String Date = null;
 	private Date DOB;
 	private String FirstName;
 	private String MiddleName;
@@ -55,7 +54,8 @@ public abstract class Person implements java.io.Serializable {
 			this.DOB = DOB;
 		}
 		else{
-			throw new PersonException(Date);
+
+			throw new PersonException(this); 
 		}
 		
 		
